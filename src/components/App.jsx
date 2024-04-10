@@ -1,3 +1,9 @@
+import Statistics from './Statistics';
+
 export const App = () => {
-  return <div>React homework template</div>;
+  return (
+    <>
+      <Statistics />
+    </>
+  );
 };
