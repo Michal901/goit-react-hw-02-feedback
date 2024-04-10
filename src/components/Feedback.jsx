@@ -1,9 +1,9 @@
-export default function Feedback() {
+export default function Feedback(onClick) {
   return (
     <ul>
-      <button></button>
-      <button></button>
-      <button></button>
+      <button onClick={onClick}>Good</button>
+      <button onClick={onClick}>Neutral</button>
+      <button onClick={onClick}>Bad</button>
     </ul>
   );
 }
