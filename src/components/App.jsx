@@ -17,9 +17,13 @@ export const App = () => {
   function handleBadIncrement() {
     setBad(prevBad => prevBad + 1);
   }
-  // const positivePercentage = () => {
-  //   return Math.round((good / (good + neutral + bad)) * 100);
-  // };
+
+  const countTotalFeedback = () => good + neutral + bad;
+
+  const countPositiveFeedbackPercentage = () => {
+    const total = countTotalFeedback();
+    return total > 0 ? Math.round((good / total) * 100) : 0;
+  };
 
   return (
     <>
@@ -30,6 +34,8 @@ export const App = () => {
         handleGoodIncrement={handleGoodIncrement}
         handleNeutralIncrement={handleNeutralIncrement}
         handleBadIncrement={handleBadIncrement}
+        positivePercentage={countPositiveFeedbackPercentage()}
+        total={countTotalFeedback()}
       />
     </>
   );

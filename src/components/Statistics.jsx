@@ -2,6 +2,7 @@ export default function Statistics({
   good = 0,
   neutral = 0,
   bad = 0,
+  total = 0,
   positivePercentage = 0,
   handleGoodIncrement,
   handleNeutralIncrement,
@@ -18,8 +19,8 @@ export default function Statistics({
         <li>Good: {good}</li>
         <li>Neutral: {neutral}</li>
         <li>Bad: {bad}</li>
-        <li>Total: {good + neutral + bad}</li>
-        <li>Positive feedback: {positivePercentage}</li>
+        <li>Total: {total}</li>
+        <li>Positive feedback: {positivePercentage}%</li>
       </ol>
     </>
   );
