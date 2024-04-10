@@ -1,10 +1,15 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import Section from './Section';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Feedback from './Feedback';
+
+const styledDiv = styled.div`
+  display: flex;
+  gap: 15px;
+`;
 
 export const App = () => {
   const [good, setGood] = useState([0]);
@@ -31,7 +36,7 @@ export const App = () => {
   return (
     <>
       <Section title={'Please leave feedback'}>
-        <div className="btn-wrapper">
+        <div>
           <FeedbackOptions
             title={'Good'}
             options={good}
