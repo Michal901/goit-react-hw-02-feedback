@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import Statistics from './Statistics';
-import Feedback from './Feedback';
 
 export const App = () => {
   const [good, setGood] = useState(0);
@@ -19,9 +18,9 @@ export const App = () => {
   }
 
   const countTotalFeedback = () => good + neutral + bad;
+  const total = countTotalFeedback();
 
   const countPositiveFeedbackPercentage = () => {
-    const total = countTotalFeedback();
     return total > 0 ? Math.round((good / total) * 100) : 0;
   };
 
