@@ -1,4 +1,8 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+// const StyledOl = styled.ol`
+// `;
 
 export default function Statistics({
   good = 0,

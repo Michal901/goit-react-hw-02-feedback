@@ -31,21 +31,23 @@ export const App = () => {
   return (
     <>
       <Section title={'Please leave feedback'}>
-        <FeedbackOptions
-          title={'Good'}
-          options={good}
-          onLeaveFeedback={handleGoodIncrement}
-        />
-        <FeedbackOptions
-          title={'Neutral'}
-          options={neutral}
-          onLeaveFeedback={handleNeutralIncrement}
-        />
-        <FeedbackOptions
-          title={'Bad'}
-          options={bad}
-          onLeaveFeedback={handleBadIncrement}
-        />
+        <div className="btn-wrapper">
+          <FeedbackOptions
+            title={'Good'}
+            options={good}
+            onLeaveFeedback={handleGoodIncrement}
+          />
+          <FeedbackOptions
+            title={'Neutral'}
+            options={neutral}
+            onLeaveFeedback={handleNeutralIncrement}
+          />
+          <FeedbackOptions
+            title={'Bad'}
+            options={bad}
+            onLeaveFeedback={handleBadIncrement}
+          />
+        </div>
       </Section>
       {total === 0 ? (
         <Feedback message="No feedback given" />
