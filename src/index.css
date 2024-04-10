@@ -25,24 +25,6 @@ section {
   flex-direction: column;
 }
 
-.feedback-msg {
-  display: flex;
-  justify-content: center;
-}
-
-/* .feedback-btn {
-  width: 100px;
-  height: 30px;
-  border-radius: 20px;
-  border: 1px solid black;
-  background-color: #fff;
-  cursor: pointer;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-} */
-/* .feedback-btn:hover {
-  background-color: rgb(152, 255, 253);
-} */
 .btn-wrapper {
   display: flex;
   gap: 15px;
