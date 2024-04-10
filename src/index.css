@@ -1,5 +1,9 @@
 @import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
 
+* {
+  font-family: 'Quicksand', sans-serif;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,6 +29,29 @@ section {
   display: flex;
   justify-content: center;
 }
+
+/* .feedback-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+} */
+/* .feedback-btn:hover {
+  background-color: rgb(152, 255, 253);
+} */
 .btn-wrapper {
   display: flex;
+  gap: 15px;
+}
+
+ol {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-transform: uppercase;
 }

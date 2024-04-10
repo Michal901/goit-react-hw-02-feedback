@@ -17,11 +17,21 @@ export default function Statistics({
   return (
     <>
       <ol>
-        <li>Good: {good}</li>
-        <li>Neutral: {neutral}</li>
-        <li>Bad: {bad}</li>
-        <li>Total: {total}</li>
-        <li>Positive feedback: {positivePercentage}%</li>
+        <li>
+          Good: <strong> {good}</strong>
+        </li>
+        <li>
+          Neutral: <strong> {neutral}</strong>
+        </li>
+        <li>
+          Bad: <strong> {bad}</strong>
+        </li>
+        <li>
+          Total:<strong> {total}</strong>
+        </li>
+        <li>
+          Positive feedback:<strong> {positivePercentage}%</strong>
+        </li>
       </ol>
     </>
   );

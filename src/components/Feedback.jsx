@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 export default function Feedback({ message }) {
   return <h2 className="feedback-msg">{message}</h2>;
