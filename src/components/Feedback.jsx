@@ -6,10 +6,10 @@ const StyledH2 = styled.h2`
   justify-content: center;
   margin-top: 2rem;
 `;
-export default function Feedback({ message }) {
+export default function Notification({ message }) {
   return <StyledH2 className="feedback-msg">{message}</StyledH2>;
 }
 
-Feedback.propTypes = {
+Notification.propTypes = {
   message: PropTypes.string.isRequired,
 };

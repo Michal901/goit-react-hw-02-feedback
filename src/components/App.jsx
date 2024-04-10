@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Section from './Section';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
-import Feedback from './Feedback';
+import Notification from './Feedback';
 
 const StyledDiv = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ export const App = () => {
         </StyledDiv>
       </Section>
       {total === 0 ? (
-        <Feedback message="No feedback given" />
+        <Notification message="No feedback given" />
       ) : (
         <Section title={'Statistics'}>
           <Statistics
