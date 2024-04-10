@@ -2,14 +2,11 @@ export default function Statistics({
   good = 0,
   neutral = 0,
   bad = 0,
+  positivePercentage = 0,
   handleGoodIncrement,
   handleNeutralIncrement,
   handleBadIncrement,
 }) {
-  const positivePercentage = () => {
-    return Math.round((good / (good + neutral + bad)) * 100);
-  };
-
   return (
     <>
       <ul>

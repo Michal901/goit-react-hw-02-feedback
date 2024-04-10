@@ -10,16 +10,16 @@ export const App = () => {
 
   function handleGoodIncrement() {
     setGood(prevGood => prevGood + 1);
-    console.log(good);
   }
   function handleNeutralIncrement() {
     setNeutral(prevNeutral => prevNeutral + 1);
-    console.log(neutral);
   }
   function handleBadIncrement() {
     setBad(prevBad => prevBad + 1);
-    console.log(bad);
   }
+  // const positivePercentage = () => {
+  //   return Math.round((good / (good + neutral + bad)) * 100);
+  // };
 
   return (
     <>
