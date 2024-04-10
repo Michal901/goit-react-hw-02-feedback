@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Statistics({
   good = 0,
   neutral = 0,

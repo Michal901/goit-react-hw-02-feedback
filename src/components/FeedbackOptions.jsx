@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function FeedbackOptions({ title, options, onLeaveFeedback }) {
   return (
     <div>
