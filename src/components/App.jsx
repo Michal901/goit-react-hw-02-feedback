@@ -1,6 +1,9 @@
 import { useState } from 'react';
+
+import Section from './Section';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
+import Feedback from './Feedback';
 
 export const App = () => {
   const [good, setGood] = useState([0]);
@@ -26,28 +29,36 @@ export const App = () => {
 
   return (
     <>
-      <FeedbackOptions
-        title={'Good'}
-        options={good}
-        onLeaveFeedback={handleGoodIncrement}
-      />
-      <FeedbackOptions
-        title={'Neutral'}
-        options={neutral}
-        onLeaveFeedback={handleNeutralIncrement}
-      />
-      <FeedbackOptions
-        title={'Bad'}
-        options={bad}
-        onLeaveFeedback={handleBadIncrement}
-      />
-      <Statistics
-        good={good[0]}
-        neutral={neutral[0]}
-        bad={bad[0]}
-        positivePercentage={countPositiveFeedbackPercentage()}
-        total={countTotalFeedback()}
-      />
+      <Section title={'Please leave feedback'}>
+        <FeedbackOptions
+          title={'Good'}
+          options={good}
+          onLeaveFeedback={handleGoodIncrement}
+        />
+        <FeedbackOptions
+          title={'Neutral'}
+          options={neutral}
+          onLeaveFeedback={handleNeutralIncrement}
+        />
+        <FeedbackOptions
+          title={'Bad'}
+          options={bad}
+          onLeaveFeedback={handleBadIncrement}
+        />
+      </Section>
+      {total === 0 ? (
+        <Feedback message="No feedback given" />
+      ) : (
+        <Section title={'Statistics'}>
+          <Statistics
+            good={good[0]}
+            neutral={neutral[0]}
+            bad={bad[0]}
+            positivePercentage={countPositiveFeedbackPercentage()}
+            total={countTotalFeedback()}
+          />
+        </Section>
+      )}
     </>
   );
 };

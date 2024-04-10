@@ -1,5 +1,3 @@
-import Feedback from './Feedback';
-
 export default function Statistics({
   good = 0,
   neutral = 0,
@@ -12,22 +10,13 @@ export default function Statistics({
 }) {
   return (
     <>
-      {/* <ul>
-        <button onClick={handleGoodIncrement}>Good</button>
-        <button onClick={handleNeutralIncrement}>Neutral</button>
-        <button onClick={handleBadIncrement}>Bad</button>
-      </ul> */}
-      {total === 0 ? (
-        <Feedback message="No feedback given" />
-      ) : (
-        <ol>
-          <li>Good: {good}</li>
-          <li>Neutral: {neutral}</li>
-          <li>Bad: {bad}</li>
-          <li>Total: {total}</li>
-          <li>Positive feedback: {positivePercentage}%</li>
-        </ol>
-      )}
+      <ol>
+        <li>Good: {good}</li>
+        <li>Neutral: {neutral}</li>
+        <li>Bad: {bad}</li>
+        <li>Total: {total}</li>
+        <li>Positive feedback: {positivePercentage}%</li>
+      </ol>
     </>
   );
 }
