@@ -12,11 +12,11 @@ export default function Statistics({
 }) {
   return (
     <>
-      <ul>
+      {/* <ul>
         <button onClick={handleGoodIncrement}>Good</button>
         <button onClick={handleNeutralIncrement}>Neutral</button>
         <button onClick={handleBadIncrement}>Bad</button>
-      </ul>
+      </ul> */}
       {total === 0 ? (
         <Feedback message="No feedback given" />
       ) : (
