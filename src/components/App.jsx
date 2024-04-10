@@ -6,7 +6,7 @@ import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Feedback from './Feedback';
 
-const styledDiv = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   gap: 15px;
 `;
@@ -36,7 +36,7 @@ export const App = () => {
   return (
     <>
       <Section title={'Please leave feedback'}>
-        <div>
+        <StyledDiv>
           <FeedbackOptions
             title={'Good'}
             options={good}
@@ -52,7 +52,7 @@ export const App = () => {
             options={bad}
             onLeaveFeedback={handleBadIncrement}
           />
-        </div>
+        </StyledDiv>
       </Section>
       {total === 0 ? (
         <Feedback message="No feedback given" />

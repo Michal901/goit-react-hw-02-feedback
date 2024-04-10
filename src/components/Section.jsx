@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;

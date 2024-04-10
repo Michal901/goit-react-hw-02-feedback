@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-// const StyledOl = styled.ol`
-// `;
+const StyledOl = styled.ol`
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-transform: uppercase;
+`;
 
 export default function Statistics({
   good = 0,
@@ -16,7 +21,7 @@ export default function Statistics({
 }) {
   return (
     <>
-      <ol>
+      <StyledOl>
         <li>
           Good: <strong> {good}</strong>
         </li>
@@ -32,7 +37,7 @@ export default function Statistics({
         <li>
           Positive feedback:<strong> {positivePercentage}%</strong>
         </li>
-      </ol>
+      </StyledOl>
     </>
   );
 }
