@@ -12,22 +12,21 @@ const StyledDiv = styled.div`
 `;
 
 export const App = () => {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+  const [feedback, setFeedback] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  });
 
-  function handleGoodIncrement() {
-    setGood(prevGood => [prevGood[0] + 1]);
-  }
-  function handleNeutralIncrement() {
-    setNeutral(prevNeutral => [prevNeutral[0] + 1]);
-  }
-  function handleBadIncrement() {
-    setBad(prevBad => [prevBad + 1]);
-  }
+  const handleIncrement = option => {
+    setFeedback(prevState => ({
+      ...prevState,
+      [option]: prevState[option] + 1,
+    }));
+  };
 
-  const countTotalFeedback = () => good + neutral + bad;
-  const total = countTotalFeedback();
+  const { good, neutral, bad } = feedback;
+  const total = good + neutral + bad;
 
   const countPositiveFeedbackPercentage = () => {
     return total > 0 ? Math.round((good / total) * 100) : 0;
@@ -39,18 +38,18 @@ export const App = () => {
         <StyledDiv>
           <FeedbackOptions
             title={'Good'}
-            options={good}
-            onLeaveFeedback={handleGoodIncrement}
+            options={[good]}
+            onLeaveFeedback={() => handleIncrement('good')}
           />
           <FeedbackOptions
             title={'Neutral'}
-            options={neutral}
-            onLeaveFeedback={handleNeutralIncrement}
+            options={[neutral]}
+            onLeaveFeedback={() => handleIncrement('good')}
           />
           <FeedbackOptions
             title={'Bad'}
-            options={bad}
-            onLeaveFeedback={handleBadIncrement}
+            options={[bad]}
+            onLeaveFeedback={() => handleIncrement('good')}
           />
         </StyledDiv>
       </Section>
@@ -59,11 +58,11 @@ export const App = () => {
       ) : (
         <Section title={'Statistics'}>
           <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
+            good={feedback.good}
+            neutral={feedback.neutral}
+            bad={feedback.bad}
             positivePercentage={countPositiveFeedbackPercentage()}
-            total={countTotalFeedback()}
+            total={total}
           />
         </Section>
       )}
