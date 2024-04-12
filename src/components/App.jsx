@@ -44,12 +44,12 @@ export const App = () => {
           <FeedbackOptions
             title={'Neutral'}
             options={[neutral]}
-            onLeaveFeedback={() => handleIncrement('good')}
+            onLeaveFeedback={() => handleIncrement('neutral')}
           />
           <FeedbackOptions
             title={'Bad'}
             options={[bad]}
-            onLeaveFeedback={() => handleIncrement('good')}
+            onLeaveFeedback={() => handleIncrement('bad')}
           />
         </StyledDiv>
       </Section>
@@ -58,9 +58,9 @@ export const App = () => {
       ) : (
         <Section title={'Statistics'}>
           <Statistics
-            good={feedback.good}
-            neutral={feedback.neutral}
-            bad={feedback.bad}
+            good={good}
+            neutral={neutral}
+            bad={bad}
             positivePercentage={countPositiveFeedbackPercentage()}
             total={total}
           />
