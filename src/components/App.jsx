@@ -12,9 +12,9 @@ const StyledDiv = styled.div`
 `;
 
 export const App = () => {
-  const [good, setGood] = useState([0]);
-  const [neutral, setNeutral] = useState([0]);
-  const [bad, setBad] = useState([0]);
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
 
   function handleGoodIncrement() {
     setGood(prevGood => [prevGood[0] + 1]);
@@ -23,14 +23,14 @@ export const App = () => {
     setNeutral(prevNeutral => [prevNeutral[0] + 1]);
   }
   function handleBadIncrement() {
-    setBad(prevBad => [prevBad[0] + 1]);
+    setBad(prevBad => [prevBad + 1]);
   }
 
-  const countTotalFeedback = () => good[0] + neutral[0] + bad[0];
+  const countTotalFeedback = () => good + neutral + bad;
   const total = countTotalFeedback();
 
   const countPositiveFeedbackPercentage = () => {
-    return total > 0 ? Math.round((good[0] / total) * 100) : 0;
+    return total > 0 ? Math.round((good / total) * 100) : 0;
   };
 
   return (
@@ -59,9 +59,9 @@ export const App = () => {
       ) : (
         <Section title={'Statistics'}>
           <Statistics
-            good={good[0]}
-            neutral={neutral[0]}
-            bad={bad[0]}
+            good={good}
+            neutral={neutral}
+            bad={bad}
             positivePercentage={countPositiveFeedbackPercentage()}
             total={countTotalFeedback()}
           />
