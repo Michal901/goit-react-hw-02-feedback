@@ -17,6 +17,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(290deg, #0093e9 0%, #80d0c7 100%);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
 
 #root {
   display: flex;
@@ -31,5 +39,6 @@ code {
   align-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  box-shadow: 4px 5px 7px 2px #b6b2b2;
+  box-shadow: 4px 5px 7px 2px #6b6b6b;
+  background-color: white;
 }
