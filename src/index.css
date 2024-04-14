@@ -19,5 +19,17 @@ code {
 }
 
 #root {
-  margin-top: 150px;
+  display: flex;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid transparent;
+  flex-direction: column;
+  border-radius: 10%;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 4px 5px 7px 2px #b6b2b2;
 }

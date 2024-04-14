@@ -7,6 +7,7 @@ const StyledOl = styled.ol`
   gap: 10px;
   flex-direction: column;
   text-transform: uppercase;
+  margin-bottom: 50px;
 `;
 
 export default function Statistics({
